@@ -15,6 +15,7 @@ dependencies = [
     "google-genai>=1.24.0",
     "pytest>=8.4.0",
     "httpx>=0.28.1",
+    "pathspec>=0.12.1",
 ]
 
 

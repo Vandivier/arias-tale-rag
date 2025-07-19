@@ -2,9 +2,9 @@ Act as an expert AI engineer, software developer, and fullstack developer to hel
 Here is the pyproject.toml file for this project which describes the dependencies:
 ```
 [project]
-name = "adk-agent"
-version = "0.0.2"
-description = "Backend for the google-adk Agent"
+name = "arias-tale-rag"
+version = "0.0.1"
+description = "Backend for the Arias Tale RAG"
 authors = [
     { name = "John Vandivier", email = "john@ladderly.io" },
 ]
@@ -16,6 +16,9 @@ dependencies = [
     "fastapi>=0.115.12",
     "google-adk>=1.5.0",
     "google-genai>=1.24.0",
+    "pytest>=8.4.0",
+    "httpx>=0.28.1",
+    "pathspec>=0.12.1",
 ]
 
 
@@ -61,7 +64,6 @@ Here is the folder structure of the project:
 .gitignore
 Dockerfile
 LICENSE
-Makefile
 README.md
 backend/
     .env.example
@@ -70,18 +72,24 @@ backend/
     README.md
     pyproject.toml
     uv.lock
+    backend/.pytest_cache/
     backend/scripts/
         copilot-instructions.txt
         create-copilot-instructions.py
+        source.csv
     backend/src/
+        __init__.py
+        agent.py
+        agent_search.py
+        app.py
+        orchestrator.py
+        server.py
+        test_integration.py
+        test_unit.py
+        utils.py
+        backend/src/__pycache__/
         backend/src/adk_agent.egg-info/
-        backend/src/agent/
-            __init__.py
-            agent.py
-            app.py
-            server.py
-            utils.py
-            backend/src/agent/__pycache__/
+        backend/src/arias_tale_rag.egg-info/
 frontend/
     .env.example
     .gitignore

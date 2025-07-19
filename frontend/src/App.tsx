@@ -1,9 +1,6 @@
 import { useChat } from "@ai-sdk/react";
-import { useState } from "react";
 
 export default function App() {
-  const [effort, setEffort] = useState<string>("medium");
-
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
     useChat({
       api: `${
@@ -35,35 +32,28 @@ export default function App() {
             <div className="flex flex-col items-center justify-center h-full space-y-6">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  AI Research Assistant
+                  Aria's Tale Encyclopedia
                 </h1>
                 <p className="text-xl text-neutral-400 max-w-2xl">
-                  Ask me anything and I'll search the web to provide you with
-                  accurate, up-to-date information.
+                  Let's chat about{" "}
+                  <a
+                    className="text-blue-400 hover:text-blue-500"
+                    href="https://www.ariastale.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Aria's Tale
+                  </a>{" "}
+                  Lore!
                 </p>
               </div>
 
               <div className="w-full max-w-2xl space-y-4">
-                <div className="space-y-2">
-                  <label className="text-sm text-neutral-400">
-                    Research Effort Level:
-                  </label>
-                  <select
-                    value={effort}
-                    onChange={(e) => setEffort(e.target.value)}
-                    className="w-full p-3 bg-neutral-700 border border-neutral-600 rounded-lg text-neutral-100 focus:border-blue-500 focus:outline-none"
-                  >
-                    <option value="low">Low - Quick search</option>
-                    <option value="medium">Medium - Balanced research</option>
-                    <option value="high">High - Thorough investigation</option>
-                  </select>
-                </div>
-
                 <form onSubmit={handleFormSubmit} className="space-y-3">
                   <textarea
                     value={input}
                     onChange={handleInputChange}
-                    placeholder="What would you like to research?"
+                    placeholder="What would you like to ask about Aria's Tale?"
                     className="w-full p-4 bg-neutral-700 border border-neutral-600 rounded-lg text-neutral-100 placeholder-neutral-400 focus:border-blue-500 focus:outline-none resize-none"
                     rows={4}
                     disabled={isLoading}
@@ -72,9 +62,9 @@ export default function App() {
                     <button
                       type="submit"
                       disabled={!input.trim() || isLoading}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-neutral-600 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-neutral-600 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors cursor-pointer"
                     >
-                      {isLoading ? "Researching..." : "Start Research"}
+                      {isLoading ? "Thinking..." : "Submit"}
                     </button>
                     {isLoading && (
                       <button

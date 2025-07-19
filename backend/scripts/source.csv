@@ -1,0 +1,93 @@
+asset_kind,value,notes  
+character,Eorhelm,Level 3 Human Warrior from Evergreen Outskirts with Greatsword and Tower Shield  
+character,Lunara the Swift,Level 4 Rare Elf Archer from Whispering Woods with Longbow of the Ancients  
+character,Drogan Flamebeard,Level 3 Dwarf Mage from Molten Depths with Caster's Staff of the Core  
+character,Automaton Guardian No. 7519,Level 3 Automaton Guardian from Mechanical Bastion with Energy Core  
+character,Aria,Level 5 Rare Human Spellcaster from Emerald Forest with Enchanted Staff  
+character,Tank,Human Spearman controlled by player Mike  
+character,Eidolon,Fae Ranger with spiritual energy abilities  
+character,Elara,Priestess of Light and healer leader of The Shield Bearers  
+class,warrior,Basic combat class with high attack and defense stats  
+class,mage,Basic magic class with high magic attack  
+class,archer,Basic ranged class with high speed and attack  
+class,healer,Non-basic support class with healing abilities  
+class,ninja,Non-basic stealth class  
+class,merchant,Non-basic utility class  
+class,guardian,Tank class with high defense capabilities  
+class,spellcaster,Magic-focused class variant  
+place,Evergreen,Main fantasy world containing multiple continents and regions  
+place,Aetheria,Floating continent that moves around the equator  
+place,Dragonica,Vast land ruled by dragons with human settlements in north  
+place,New Olympia,Mountain range with large dwarven civilization  
+place,Obsidia,Region containing Coast of Echoes and Forest of Echoes  
+place,Eastgate,Capital city of Obsidia with mixed population  
+place,Forest of Echoes,Woodland area containing Lake of Whispers and Town of Echoes  
+place,Whispering Woods,Forested area where Lunara awakened  
+place,Town of Echoes,Settlement where players gather and form guilds  
+place,Lake of Whispers,Peaceful lake used for training expeditions  
+place,Molten Depths,Dwarven region under mountains where Drogan originated  
+place,Mechanical Bastion,Region where Automaton Guardian was constructed  
+place,Emerald Forest,Area where Aria awakened  
+place,Regalis,Region containing Reion citadel and Elderglen library  
+place,Terah,The Land of Judges with desert in south  
+place,Elysia,Plains region with egalitarian people  
+place,Earth,Real world with various regions including North America and Europe  
+item,Greatsword,Two-handed weapon wielded by Eorhelm  
+item,Tower Shield,Large defensive equipment for warriors  
+item,Silver Armor,Protective gear worn by Eorhelm  
+item,Longbow of the Ancients,Legendary elven archery weapon  
+item,Quiver of Endless Arrows,Magical ammunition container  
+item,Cloak of Elvenkind,Special elven garment  
+item,Caster's Staff of the Core,Magical weapon for spellcasters  
+item,Enchanted Robes,Protective magical clothing  
+item,Flame Rune Amulet,Fire-based magical accessory  
+item,Energy Core,Power source for automatons  
+item,Memory Chip,Data storage for mechanical beings  
+item,Repair Kit,Maintenance tools for automatons  
+item,Enchanted Staff,Aria's primary magical weapon  
+item,Spell Tome,Book containing magical knowledge  
+item,Mystic Amulet,General magical accessory  
+item,Healing Potions,Consumable health restoration items  
+item,Mana Crystals,Consumable magic restoration items  
+ability,Berserk Charge,Warrior rushing attack ability  
+ability,Defender's Oath,Protective warrior ability  
+ability,War Cry,Warrior intimidation ability  
+ability,Eagle Eye,Archer precision enhancement  
+ability,Wind Walker,Movement enhancement ability  
+ability,Nature's Blessing,Natural magic ability  
+ability,Lava Burst,Fire-based offensive spell  
+ability,Forge Shield,Defensive magical ability  
+ability,Ancestor's Wisdom,Knowledge-based ability  
+ability,Precision Strike,Accurate attack ability  
+ability,Shield Protocol,Defensive system activation  
+ability,Self-Repair,Automatic healing for automatons  
+ability,Arcane Blast,General magic attack spell  
+ability,Telekinesis,Mind-over-matter ability  
+ability,Elemental Manipulation,Control over natural elements  
+organization,Aria's Guild,Player guild led by Aria with ~80 members  
+organization,The Shield Bearers,Guild led by Elara focusing on defense and healing  
+organization,The Vanguard,Guild that Eorhelm belongs to  
+organization,The Silent Arrows,Archer guild that Lunara is a key member of  
+organization,The Rune Casters,Mage guild for Drogan  
+organization,Order of the Valiant,Religious organization  
+organization,Knights of Evergreen,Cultural/military organization  
+organization,Guild of Arcanists,Magic-focused religious group  
+organization,Cult of the Eternal Flame,Fire-based religious cult  
+organization,Path of the Silent Wind,Nature-based religious path  
+narrative_beat,The Monstrous Vision,Players discover they cannot log out and must defeat 100th floor boss  
+narrative_beat,Goblin Fight,Party encounters and defeats goblin warband in forest  
+narrative_beat,Chef Drogan's Memories,Flashback to Drogan's culinary background in Molten Depths  
+narrative_beat,Guild Formation,Aria successfully rallies players into her guild  
+narrative_beat,Tank's Trial,Tank undergoes dangerous initiation trial for The Shield Bearers  
+narrative_beat,Lake Training Expedition,The Shield Bearers undertake training mission  
+race,Human,Most common playable race  
+race,Elf,Long-lived magical race  
+race,Dwarf,Mountain-dwelling crafting race  
+race,Automaton,Mechanical constructed beings  
+race,Fae,Spiritual nature-connected beings  
+enemy_type,Goblin,Common low-level enemies  
+enemy_type,Hobgoblin Leader,Mid-level goblin commander  
+enemy_type,Plant Monster,Forest-dwelling creature  
+enemy_type,Giant Squirrel,Territorial forest beast  
+enemy_type,Wolf Pack,Predatory group enemies  
+enemy_type,Water and Metal Elemental,Powerful magical creature

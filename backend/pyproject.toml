@@ -1,7 +1,7 @@
 [project]
-name = "adk-agent"
-version = "0.0.2"
-description = "Backend for the google-adk Agent"
+name = "arias-tale-rag"
+version = "0.0.1"
+description = "Backend for the Arias Tale RAG"
 authors = [
     { name = "John Vandivier", email = "john@ladderly.io" },
 ]

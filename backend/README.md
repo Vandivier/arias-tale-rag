@@ -30,8 +30,8 @@ We estimate accuracy as the percentage of passed test cases in src/integration_t
 Run the server with Docker as mentioned in the top-level README.md:
 
 ```bash
-docker build -t adk-quickstart .
-docker run -p 8000:8000 adk-quickstart
+docker build -t arias-tale-rag .
+docker run -p 8000:8000 arias-tale-rag
 ```
 
 Now you can validate that the server is running properly with a curl command:

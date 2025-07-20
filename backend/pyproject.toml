@@ -16,6 +16,7 @@ dependencies = [
     "httpx>=0.28.1",
     "pathspec>=0.12.1",
     "google-adk>=1.7.0",
+    "supabase>=2.0.0",
 ]
 
 

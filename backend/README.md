@@ -2,7 +2,11 @@
 
 this backend `requires-python = ">=3.11,<4.0"`
 
-first, copy the environment variable file and populate appropriately:
+first, spin up the local supabase postgres database in database/
+
+Once the pg docker container is setup succesfully, you will be able to get the needed environment variables for python communication to the database instance.
+
+Next, copy the backend/ environment variable file and populate appropriately:
 
 ```bash
 cp .env.example .env
@@ -16,6 +20,12 @@ uv venv
 source .venv/bin/activate
 # or, `source .venv/Scripts/activate` on Windows
 uv pip install -r pyproject.toml
+```
+
+now you can load the csv data into the pg database for vector indexing:
+
+```bash
+python scripts/ingest_data.py
 ```
 
 now you can run the app via the adk cli

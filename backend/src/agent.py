@@ -1,11 +1,11 @@
-from google.adk.agents import Agent
+from google.adk.agents import LlmAgent
 from src.utils import create_horse_fact, roll_a_dice
 from google.genai import types
 
 # TODO: RAG instance, or RAG as a tool?
 arias_tale_rag_tool = create_horse_fact
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="arias_tale_rag_agent",
     model="gemini-2.0-flash",
     instruction=(

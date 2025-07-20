@@ -2,12 +2,19 @@
 
 this backend `requires-python = ">=3.11,<4.0"`
 
-install and run the app using [uv](https://docs.astral.sh/uv/getting-started/installation/):
+first, copy the environment variable file and populate appropriately:
+
+```bash
+cp .env.example .env
+```
+
+then, install and run the app using [uv](https://docs.astral.sh/uv/getting-started/installation/):
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv venv
 source .venv/bin/activate
+# or, `source .venv/Scripts/activate` on Windows
 uv pip install -r pyproject.toml
 ```
 

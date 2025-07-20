@@ -11,11 +11,11 @@ requires-python = ">=3.11,<4.0"
 dependencies = [
     "python-dotenv>=1.0.1",
     "fastapi>=0.115.12",
-    "google-adk>=1.5.0",
     "google-genai>=1.24.0",
     "pytest>=8.4.0",
     "httpx>=0.28.1",
     "pathspec>=0.12.1",
+    "google-adk>=1.7.0",
 ]
 
 

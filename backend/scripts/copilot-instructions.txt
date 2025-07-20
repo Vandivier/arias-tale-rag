@@ -14,11 +14,11 @@ requires-python = ">=3.11,<4.0"
 dependencies = [
     "python-dotenv>=1.0.1",
     "fastapi>=0.115.12",
-    "google-adk>=1.5.0",
     "google-genai>=1.24.0",
     "pytest>=8.4.0",
     "httpx>=0.28.1",
     "pathspec>=0.12.1",
+    "google-adk>=1.7.0",
 ]
 
 
@@ -72,11 +72,12 @@ backend/
     README.md
     pyproject.toml
     uv.lock
-    backend/.pytest_cache/
     backend/scripts/
+        cleaned_source.csv
         copilot-instructions.txt
         create-copilot-instructions.py
         source.csv
+        update-source-csv.py
     backend/src/
         __init__.py
         agent.py
@@ -86,7 +87,6 @@ backend/
         test_unit.py
         utils.py
         backend/src/__pycache__/
-        backend/src/adk_agent.egg-info/
         backend/src/arias_tale_rag.egg-info/
 frontend/
     .env.example
@@ -99,7 +99,6 @@ frontend/
     tsconfig.json
     tsconfig.node.json
     vite.config.ts
-    frontend/dist/
     frontend/node_modules/
     frontend/public/
         vite.svg

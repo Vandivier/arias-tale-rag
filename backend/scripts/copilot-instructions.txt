@@ -80,9 +80,7 @@ backend/
     backend/src/
         __init__.py
         agent.py
-        agent_search.py
         app.py
-        orchestrator.py
         server.py
         test_integration.py
         test_unit.py

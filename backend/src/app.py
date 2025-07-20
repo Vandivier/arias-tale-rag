@@ -4,7 +4,7 @@ from fastapi import FastAPI, Response, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-from orchestrator import root_agent
+from agent import root_agent
 import json
 from contextlib import asynccontextmanager
 

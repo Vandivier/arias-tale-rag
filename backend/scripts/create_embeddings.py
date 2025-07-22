@@ -10,6 +10,7 @@ from supabase import create_client, Client
 API_CALLS_PER_MINUTE = 50
 SECONDS_PER_MINUTE = 60
 DELAY_BETWEEN_CALLS = SECONDS_PER_MINUTE / API_CALLS_PER_MINUTE
+RECORD_LIMIT = 10 # set to 0 to process all documents
 
 def main():
     """
@@ -42,8 +43,9 @@ def main():
         return
 
     print(f"Found {len(documents)} documents to process.")
-
-    for doc in documents:
+    documents_to_process = documents[:RECORD_LIMIT] if RECORD_LIMIT else documents
+    print(f"Processing {len(documents_to_process)} documents...")
+    for doc in documents_to_process:
         doc_id = doc["id"]
         content = doc["content"]
 

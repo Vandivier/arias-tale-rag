@@ -48,7 +48,6 @@ def arias_tale_rag_tool(query: str) -> str:
         ).execute()
 
         # 3. Format and return the results
-        # breakpoint()
         results = response.data
         if not results:
             return "No relevant information found in the Aria's Tale lore database."

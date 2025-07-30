@@ -22,10 +22,11 @@ source .venv/bin/activate
 uv pip install -r pyproject.toml
 ```
 
-now you can load the csv data into the pg database for vector indexing:
+now you can load the csv data into the pg database and compile vector embeddings:
 
 ```bash
 python scripts/ingest_data.py
+python scripts/create_embeddings.py
 ```
 
 now you can run the app via the adk cli
@@ -33,6 +34,8 @@ now you can run the app via the adk cli
 ```bash
 adk web
 ```
+
+In the Agent Development Kit playground, select the `src/` directory in the dropdown to activate `arias_tale_rag_agent`
 
 ## unit testing
 

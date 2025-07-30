@@ -9,21 +9,22 @@ from supabase import create_client, Client
 MATCH_THRESHOLD = 0.75
 MAX_RESULTS = 5
 
+
 def arias_tale_rag_tool(query: str) -> str:
     """
     Searches the Aria's Tale lore database to find information
     relevant to the user's query.
     """
     # Load environment variables
-    dotenv_path = Path(__file__).parent.parent / '.env'
+    dotenv_path = Path(__file__).parent.parent / ".env"
     load_dotenv(dotenv_path=dotenv_path)
 
     # Initialize clients
     if not os.environ.get("GOOGLE_API_KEY"):
         return "Error: GOOGLE_API_KEY is not set."
     client = genai.Client()
-    
-    supabase_url = os.environ.get("SUPABASE_URL")
+
+    supabase_url = os.environ.get("SUPABASE_API_URL")
     supabase_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
     if not supabase_url or not supabase_key:
         return "Error: Supabase credentials are not set."
@@ -32,8 +33,7 @@ def arias_tale_rag_tool(query: str) -> str:
     try:
         # 1. Generate an embedding for the user's query
         query_embedding_response = client.models.embed_content(
-            model="models/text-embedding-004",
-            contents=query
+            model="models/text-embedding-004", contents=query
         )
         # The response contains a list of embeddings. We need the 'values' from the first element.
         query_embedding = query_embedding_response.embeddings[0].values
@@ -56,7 +56,7 @@ def arias_tale_rag_tool(query: str) -> str:
         formatted_results = []
         for i, result in enumerate(results[:MAX_RESULTS]):
             formatted_results.append(f"Source {i+1}: {result['content']}")
-        
+
         return "\\n".join(formatted_results)
 
     except Exception as e:

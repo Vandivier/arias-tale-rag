@@ -10,14 +10,15 @@ from supabase import create_client, Client
 API_CALLS_PER_MINUTE = 50
 SECONDS_PER_MINUTE = 60
 DELAY_BETWEEN_CALLS = SECONDS_PER_MINUTE / API_CALLS_PER_MINUTE
-RECORD_LIMIT = 10 # set to 0 to process all documents
+RECORD_LIMIT = 10  # set to 0 to process all documents
+
 
 def main():
     """
     Generates and updates embeddings for documents in the Supabase table.
     """
     # Load environment variables
-    dotenv_path = Path(__file__).parent.parent / '.env'
+    dotenv_path = Path(__file__).parent.parent / ".env"
     load_dotenv(dotenv_path=dotenv_path)
 
     if not os.environ.get("GOOGLE_API_KEY"):
@@ -26,17 +27,22 @@ def main():
 
     # Initialize the clients
     client = genai.Client()
-    supabase_url = os.environ.get("SUPABASE_URL")
+    supabase_url = os.environ.get("SUPABASE_API_URL")
     supabase_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
     if not supabase_url or not supabase_key:
-        print("Error: SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set.")
+        print("Error: SUPABASE_API_URL and SUPABASE_SERVICE_ROLE_KEY must be set.")
         return
     supabase: Client = create_client(supabase_url, supabase_key)
 
     # Fetch documents that need embeddings
     print("Fetching documents without embeddings...")
-    response = supabase.table("documents").select("id, content").filter("embedding", "is", "null").execute()
-    
+    response = (
+        supabase.table("documents")
+        .select("id, content")
+        .filter("embedding", "is", "null")
+        .execute()
+    )
+
     documents = response.data
     if not documents:
         print("No documents found that need embeddings. All set!")
@@ -64,15 +70,17 @@ def main():
             embedding = result.embeddings[0].values
 
             # Update the document in Supabase
-            supabase.table("documents").update({"embedding": embedding}).eq("id", doc_id).execute()
+            supabase.table("documents").update({"embedding": embedding}).eq(
+                "id", doc_id
+            ).execute()
             print(f"Successfully updated document {doc_id}.")
 
         except Exception as e:
             print(f"An error occurred processing document {doc_id}: {e}")
-        
+
         # Respect the rate limit
         time.sleep(DELAY_BETWEEN_CALLS)
 
 
 if __name__ == "__main__":
-    main() 
+    main()
